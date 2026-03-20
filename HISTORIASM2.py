@@ -35,10 +35,32 @@ def calcular_estadisticas():
     for p in inventario:
         valor_total += p['precio'] * p['cantidad']
 
-        print(f"\nTotal de productos distintos: {conteo_productos}" )
-        print(f"Valor total del inventario: ${valor_total}")
+    print(f"\nTotal de productos distintos: {conteo_productos}" )
+    print(f"Valor total del inventario: ${valor_total}")
 
 def menu_principal():
     """"Mantiene el sistema activo y gestiona las opciones."""
     while True: 
-        print(\n SISTEMA )
+        print("\n SISTEMA DE INVENTARIO")
+        print("1. Agregar producto")
+        print("2. Mostrar inventario")
+        print("3. Calcular estadisticas")
+        print("4. Salir")
+
+        opcion = input("Seleccione una opcion: ")
+        
+        if opcion == "1":
+            agregar_producto()
+        elif opcion == "2":
+            mostrar_inventario()
+        elif opcion == "3":
+            calcular_estadisticas()
+        elif opcion == "4":
+            print("Saliendo del programa...")
+            break
+
+        else:
+            print("Opcion no valida, intente de nuevo.")
+
+if __name__ == "__main__":
+    menu_principal()
