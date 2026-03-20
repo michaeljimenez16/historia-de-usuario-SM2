@@ -39,17 +39,21 @@ def calcular_estadisticas():
     print(f"Valor total del inventario: ${valor_total}")
 
 def menu_principal():
+    # Bucle infinito para mantener el programa activo hasta el usuario decida salir
     """"Mantiene el sistema activo y gestiona las opciones."""
-    while True: 
+    while True:
+        # Visualizacion de opciones del sistema print(...)
+    
         print("\n SISTEMA DE INVENTARIO")
         print("1. Agregar producto")
         print("2. Mostrar inventario")
         print("3. Calcular estadisticas")
         print("4. Salir")
-
+# Captura de la opcion y validacion mediante condicionales (if, elif, else)
         opcion = input("Seleccione una opcion: ")
         
         if opcion == "1":
+            #Llamada a la funcion correspondiente segun la eleccion
             agregar_producto()
         elif opcion == "2":
             mostrar_inventario()
@@ -60,6 +64,7 @@ def menu_principal():
             break
 
         else:
+            # Manejo de errores para entrada no validas
             print("Opcion no valida, intente de nuevo.")
 
 if __name__ == "__main__":
