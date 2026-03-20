@@ -64,3 +64,8 @@ def menu_principal():
 
 if __name__ == "__main__":
     menu_principal()
+
+# Objetivo de la semana
+# Desarrolar un sistema modular en python que integre el uso de funciones,
+# validacion de datos con condicionales y gestion colecciones complejas
+# (lista de deccionarios) para resolver problemas de logica de negocio.
